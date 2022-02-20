@@ -6,4 +6,5 @@ cf.suggested_order_nos,cf.distance_travelled,cf.device_id,cf.customer_device_id,
 '' as is_success, cf.is_primary_call,cf.is_sales_order_made,cf.is_covered ,rd.resource_code as res_cd ,cd.customer_id as Cust_ID,
 cd.country_code as Country_Code FROM call_fact cf left outer join resource_dimension rd
 on rd.resource_key = cf.resource_key left outer join customer_dimension cd on cd.customer_key = cf.customer_key;
+on rd.resource_key = cf.resource_key left outer join customer_dimension cd on cd.customer_key = bv.customer_key;
 
